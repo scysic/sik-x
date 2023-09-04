@@ -153,5 +153,5 @@ end
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 Window:SelectTab(1)
-end 
+
 
