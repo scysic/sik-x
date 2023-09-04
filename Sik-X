@@ -118,4 +118,40 @@ Tabs.Main:AddButton({
         Callback = function()
 DistanceReachMobile = 8
 end})
+
+local Colorpicker = Tabs.Main:AddColorpicker("Colorpicker", {
+        Title = "Colorpicker",
+        Default = Color3.fromRGB(96, 205, 255)
+    })
+
+    Colorpicker:OnChanged(function()
+        print("Colorpicker changed:", Colorpicker.Value)
+    end)
+    
+    Colorpicker:SetValueRGB(Color3.fromRGB(0, 255, 140))
+
+
+
+    local TColorpicker = Tabs.Settings:AddColorpicker("TransparencyColorpicker", {
+        Title = "Colorpicker",
+        Description = "but you can change the transparency.",
+        Transparency = 0,
+        Default = Color3.fromRGB(96, 205, 255)
+    })
+
+    TColorpicker:OnChanged(function()
+        print(
+            "TColorpicker changed:", TColorpicker.Value,
+            "Transparency:", TColorpicker.Transparency
+        )
+    end)
+
+
+
 end
+
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+Window:SelectTab(1)
+end 
+
