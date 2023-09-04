@@ -86,4 +86,36 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
           end  
       })
 
+Tabs.Main:AddButton({
+        Title = "Disable Reach",
+        Description = "Disables Reach",
+        Callback = function()
+            Window:Dialog({
+                Title = "Disable Reach",
+                Content = "This turns off reach",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            RunSteppedMobile:Disconnect()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+
+Tabs.Main:AddButton({
+        Title = "Reach 8",
+        Description = "Reaches 8 studs",
+        Callback = function()
+DistanceReachMobile = 8
 end
+end})
